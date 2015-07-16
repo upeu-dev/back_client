@@ -1,0 +1,16 @@
+<div ng-controller="usersController">
+		<input type="text" ng-model="username"> {{ username }}
+
+		<table>
+			<tr>
+				<td>Nombre</td>
+				<td>email</td>
+			</tr>
+			<tr ng-repeat="d in users | filter: username">
+				<td>{{d.username}}</td>
+				<td>{{d.email}}</td>
+			</tr>
+		</table>
+
+		<a href="#" ng-click="saludo()">saludar</a>
+	</div>
