@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="crudController">
+		<input type="text" ng-model="nombre"> {{ nombre }}
+
+		<a href="#" ng-click="saludo()">saludar</a>
+	</div>
+	<script src="static/scripts/angular-1.4.3/angular.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+var app=angular.module("app",[
+	]);
+app.controller("crudController",function ($scope){
+
+	$scope.saludo = function(){
+		console.log("Hola "+$scope.nombre);
+	}
+});
+</script>
