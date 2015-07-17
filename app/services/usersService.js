@@ -6,6 +6,29 @@ app.factory("usersService",function($http){
 				return r;
 			});
 		},
-		"create":"no guarda"
+		"create": function (d) {
+			return $http.post(url, d).then(function (r){
+				return r;
+			});
+		},
+		"get": function (id) {
+			return $http.get(url, id).then(function (r){
+				return r;
+			});
+		},
+		"update":function (id, d) {
+			return $http({
+				method: 'PUT',
+				url: url +"/"+ d.id,
+				data: d
+			}).then(function (r){
+				return r;
+			});
+		},
+		"delete": function (id) {
+			return $http.delete(url, id).then(function (r){
+				return r;
+			});
+		}
 	};
 });

@@ -1,16 +1,18 @@
 <div ng-controller="usersController">
-		<input type="text" ng-model="username"> {{ username }}
 
-		<table>
-			<tr>
-				<td>Nombre</td>
-				<td>email</td>
-			</tr>
-			<tr ng-repeat="d in users | filter: username">
-				<td>{{d.username}}</td>
-				<td>{{d.email}}</td>
-			</tr>
-		</table>
+	username:<input type="text" ng-model="user.username"><br> 
+	email:<input type="text" ng-model="user.email"> <br>
+	password:<input type="text" ng-model="user.password"> <br>	
 
-		<a href="#" ng-click="saludo()">saludar</a>
-	</div>
+	<table>
+		<tr>
+			<td>Nombre</td>
+			<td>email</td>
+		</tr>
+		<tr ng-repeat="d in users">
+			<td>{{d.username}}</td>
+			<td>{{d.email}}</td>
+		</tr>
+	</table>
+	<button ng-click="save()">Save</button>
+</div>
