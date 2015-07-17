@@ -8,10 +8,14 @@
 		<tr>
 			<td>Nombre</td>
 			<td>email</td>
+			<td>edit</td>
+			<td>del</td>
 		</tr>
 		<tr ng-repeat="d in users">
 			<td>{{d.username}}</td>
 			<td>{{d.email}}</td>
+			<td><a href="" ng-click="select(d)">Edit</a></td>
+			<td><a href="" ng-click="delete(d)">X</a></td>
 		</tr>
 	</table>
 	<button ng-click="save()">Save</button>

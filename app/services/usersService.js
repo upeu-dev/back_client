@@ -11,7 +11,7 @@ app.factory("usersService",function($http){
 				return r;
 			});
 		},
-		"get": function (id) {
+		"selectx": function (id) {
 			return $http.get(url, id).then(function (r){
 				return r;
 			});
@@ -19,14 +19,14 @@ app.factory("usersService",function($http){
 		"update":function (id, d) {
 			return $http({
 				method: 'PUT',
-				url: url +"/"+ d.id,
+				url: url + d.id + "/",
 				data: d
 			}).then(function (r){
 				return r;
 			});
 		},
 		"delete": function (id) {
-			return $http.delete(url, id).then(function (r){
+			return $http.delete(url+ id.id + "/").then(function (r){
 				return r;
 			});
 		}
