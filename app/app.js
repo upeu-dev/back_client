@@ -1,5 +1,6 @@
 var app=angular.module("app",[
-	'ngRoute',
+	'ngRoute', 
+    'LocalStorageModule',
 	]);
 
 app.config(function ($routeProvider) {
@@ -14,3 +15,12 @@ app.config(function ($routeProvider) {
     });
     $routeProvider.otherwise({ redirectTo: "/home" });
 });
+
+
+app.config(function ($httpProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+});
+
+app.run(['authService', function (authService) {
+    authService.fillAuthData();
+}]);
