@@ -3,23 +3,59 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="static/node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" href="static/style01.css">
+
+	<meta name="viewport" content="initial-scale=1" />
+
 </head>
-<body>
-	Sistema x
-	<div ng-controller="indexController">
+
+
+	
+
+	
+	
+<body layout="column" ng-controller="indexController">
+
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+          <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+        </md-button>
+
+        <h1>Hello World</h1>
+        <div >
 	<a href="#test">Ir a test</a> |
 	<a href="#users">Usuarios</a>|
 	<a href="#login" ng-hide="authentication.isAuth">Login</a>
 	<a href="" ng-click="logOut()" ng-hide="!authentication.isAuth">Logout</a>
 	</div>
-
-	<hr>
-	<div ng-view></div>
+      </div>
+    </md-toolbar>
+    <div layout="row" flex>
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+          
+        </md-sidenav>
+        <div layout="column" flex id="content">
+            <md-content layout="column" flex class="md-padding">
+            
 	
+            <div ng-view></div>
+            </md-content>
+        </div>
+    </div>
 
-	<script src="static/scripts/angular-1.4.3/angular.js"></script>
-	<script src="static/scripts/angular-1.4.3/angular-route.js"></script>
-	<script src="static/scripts/angular-local-storage.js"></script>
+	<script src="static/node_modules/angular/angular.js"></script>
+	<script src="static/node_modules/angular-route/angular-route.js"></script>
+	<script src="static/node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
+
+
+    <script src="static/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="static/node_modules/angular-aria/angular-aria.js"></script>
+
+    <!-- Angular Material Javascript using GitCDN to load directly from `bower-material/master` -->
+    <script src="static/node_modules/angular-material/angular-material.js"></script>
+
 
 
     
