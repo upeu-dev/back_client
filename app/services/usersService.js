@@ -1,5 +1,5 @@
-app.factory("usersService",function($http){
-	var url="http://localhost:8000/configs/users/";
+app.factory("usersService", function($http, config){
+	var url = config.baseUrl + "configs/users/";
 	return {
 		"list": function () {
 			return $http.get(url).then(function (r){

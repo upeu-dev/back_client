@@ -4,7 +4,7 @@ app.factory('authInterceptorService', ['$q', '$injector','$location', 'localStor
     var _request = function (config) {
 
         config.headers = config.headers || {};
-        config.headers.Authorization = 'Bearer BfjChZnqQSXMYlnFTBoRwWUb3fZGUF';
+        //config.headers.Authorization = 'Bearer BfjChZnqQSXMYlnFTBoRwWUb3fZGUF';
         var authData = localStorageService.get('authorizationData');
         if (authData) {
             config.headers.Authorization = 'Bearer ' + authData.token;

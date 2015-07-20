@@ -1,4 +1,4 @@
-app.controller("usersController",function ($scope, usersService){
+app.controller("usersController",function ($scope,  usersService){
 
 	$scope.users=[];
 	

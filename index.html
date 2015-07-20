@@ -6,9 +6,13 @@
 </head>
 <body>
 	Sistema x
+	<div ng-controller="indexController">
 	<a href="#test">Ir a test</a> |
 	<a href="#users">Usuarios</a>|
-	<a href="#login">Login</a>
+	<a href="#login" ng-hide="authentication.isAuth">Login</a>
+	<a href="" ng-click="logOut()" ng-hide="!authentication.isAuth">Logout</a>
+	</div>
+
 	<hr>
 	<div ng-view></div>
 	
@@ -25,6 +29,7 @@
 	<script src="app/services/authInterceptorService.js?v=2"></script>
     <script src="app/services/authService.js?v=2"></script>
     
+	<script src="app/controllers/indexController.js"></script>
 	<script src="app/controllers/testController.js"></script>
 	<script src="app/controllers/usersController.js"></script>
 	<script src="app/controllers/loginController.js"></script>
