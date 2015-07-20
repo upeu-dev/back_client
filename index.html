@@ -10,11 +10,6 @@
 
 </head>
 
-
-	
-
-	
-	
 <body layout="column" ng-controller="indexController">
 
     <md-toolbar layout="row">
@@ -24,12 +19,15 @@
         </md-button>
 
         <h1>Hello World</h1>
+
         <div >
 	<a href="#test">Ir a test</a> |
 	<a href="#users">Usuarios</a>|
 	<a href="#login" ng-hide="authentication.isAuth">Login</a>
 	<a href="" ng-click="logOut()" ng-hide="!authentication.isAuth">Logout</a>
 	</div>
+
+
       </div>
     </md-toolbar>
     <div layout="row" flex>
