@@ -7,7 +7,8 @@
 <body>
 	Sistema x
 	<a href="#test">Ir a test</a> |
-	<a href="#users">Usuarios</a>
+	<a href="#users">Usuarios</a>|
+	<a href="#login">Login</a>
 	<hr>
 	<div ng-view></div>
 	
@@ -20,11 +21,14 @@
     
 
 	<script src="app/app.js"></script>
+	<script src="app/config.js"></script>
 	<script src="app/services/authInterceptorService.js?v=2"></script>
     <script src="app/services/authService.js?v=2"></script>
     
 	<script src="app/controllers/testController.js"></script>
 	<script src="app/controllers/usersController.js"></script>
+	<script src="app/controllers/loginController.js"></script>
+	<script src="app/controllers/notauthorizedController.js"></script>
 	<script src="app/services/usersService.js"></script>
 </body>
 </html>
