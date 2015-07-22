@@ -27,7 +27,8 @@ app.factory('authService', ['$http', '$q', 'localStorageService', 'config', func
 
     var _login = function (loginData) {
 
-        var data = "grant_type=password&client_id=uFGM7EuNY3g95KQDkClL6OTEX2F1DnipLIhfsUQO&client_secret=NcSlFIq6BedsJQYzTsaOAmhSj3jPtkCj72kEyM4iZWkPaBGwejEHkHjBxNxvh1awC4jbeACA5Grbv1E6xxNtd5fNsKqjMhpQvh8UtsjLi1K9SOoRcPNleKkypiCuR3zc&username=" + 
+        var data = "grant_type=" + config.grant_type + "&client_id=" + 
+        config.client_id + "&client_secret=" + config.client_secret + "&username=" + 
         loginData.userName + "&password=" + loginData.password;
 
 

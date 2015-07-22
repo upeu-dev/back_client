@@ -3,7 +3,9 @@ var baseUrl = 'http://localhost:8000/';
 var baseAlmacendUrl = 'http://localhost:8001/';
 
 
-
+var client_id = 'kAxiRZZ1egTqMVupq0Q4WCB0w0xZwl9D9qWGu3oc';
+var client_secret = 'j9T6cGHwOeA4GKOGLahXHXNjZnkbE4qJ3wJTZ8xI0nhHqKV9nmLcdF2sX9Nt2iT6rq8s682g18E5S2FmNIbeIlX93JdlPt0RBHs54O5Lcn0tvj2Ba6Vd3e3cZhixZK2v';
+var grant_type= 'password';
 
 var config = {
     appErrorPrefix: '[WebF1x Error] ', //Configure the exceptionHandler decorator
@@ -11,6 +13,10 @@ var config = {
     httpCacheName: 'httpCache',
     baseUrl: baseUrl,
     baseAlmacendUrl: baseAlmacendUrl,
+    
+    client_id: client_id,
+    client_secret: client_secret,
+    grant_type: grant_type,
 
 };
 

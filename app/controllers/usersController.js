@@ -1,4 +1,4 @@
-app.controller("usersController",function ($scope,  usersService){
+app.controller("usersController",function ($scope, $window, usersService){
 
 	$scope.users=[];
 	
@@ -32,14 +32,14 @@ app.controller("usersController",function ($scope,  usersService){
 		}
 	};
 	$scope.delete = function(d){
-
-		usersService.delete({ id: d.id }).then(function (r) {
-			console.log(r.data);
-			list();
-		}, function (error) {
-			alert(error.data.message);
-		});
-
+		if ($window.confirm('Confirm delete')) {
+			usersService.delete({ id: d.id }).then(function (r) {
+				console.log(r.data);
+				list();
+			}, function (error) {
+				alert(error.data.message);
+			});
+		}
 	};
 
 });
